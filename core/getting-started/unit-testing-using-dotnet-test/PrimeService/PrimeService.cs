@@ -19,6 +19,12 @@ namespace Prime.Services
                 } 
             } 
             return true;  
-        } 
+        }
+
+        public void DoNotCoverMe() {
+            var foo = "bar";
+            foo = "foobar";
+            return;
+        }
     }
 }

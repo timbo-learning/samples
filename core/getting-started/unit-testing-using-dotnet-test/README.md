@@ -11,15 +11,17 @@ https://dotnetthoughts.net/code-coverage-in-netcore-with-coverlet/
 also seems useful
 
 Tried installing [Coverage Gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters&WT.mc_id=-blog-scottha),
-failed. Extension did not show up on Visual Studio. .VSIX did not run.
-Looking for other options.
+Tried renaming .vsix to .zip, extracting and tinkering with extension.vsixmanifest and back, did not work.
 
-[codecover](https://marketplace.visualstudio.com/items?itemName=bradleymeck.codecover)
+Failed on Visual Studio Professional 2017.
+Works on Visual Studio **Code**.
+
+![Coverage-Gutter](screenshots/vscode-coverage-gutters.png)
+
+[codecover](https://marketplace.visualstudio.com/items?itemName=bradleymeck.codecover) as a second option to Coverage Gutters perhaps
 
 
-Came across this
-**suggestion: [dotCover](https://marketplace.visualstudio.com/items?itemName=JetBrains.dotCover)**
-(didnt try yet)
+[dotCover](https://marketplace.visualstudio.com/items?itemName=JetBrains.dotCover) shows up on VS Professional
 
 
 ## Coverlet First run
