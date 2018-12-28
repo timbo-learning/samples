@@ -8,8 +8,7 @@ dotnet test'''
 
 Output of the test was:
 
-```
-$ dotnet test
+```$ dotnet test
 Build started, please wait...
 Skipping running test for project C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService\PrimeService.csproj. To run tests with dotnet test add "<IsTestProject>true<IsTestProject>" property to project file.
 Build completed.
@@ -22,8 +21,7 @@ Starting test execution, please wait...
 
 Total tests: 11. Passed: 11. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1.5296 Seconds
-'''
+Test execution time: 1.5296 Seconds'''
 
 # Original README.MD
 
