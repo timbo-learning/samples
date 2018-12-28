@@ -4,7 +4,7 @@
 Under samples/core/getting-started/unit-testing-using-dotnet-test
 
 ```dotnet restore
-dotnet test```
+dotnet test'''
 
 Output of the test was:
 
@@ -23,8 +23,7 @@ Starting test execution, please wait...
 Total tests: 11. Passed: 11. Failed: 0. Skipped: 0.
 Test Run Successful.
 Test execution time: 1.5296 Seconds
-
-```
+'''
 
 # Original README.MD
 
