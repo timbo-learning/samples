@@ -7,6 +7,7 @@ coverlet.exe PrimeService.Tests/bin/Debug/netcoreapp2.2/PrimeService.Tests.dll -
 ```
 
 Output:
+
     Test run for C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService.Tests\bin\Debug\netcoreapp2.2\PrimeService.Tests.dll(.NETCoreApp,Version=v2.2)
     Microsoft (R) Test Execution Command Line Tool Version 15.9.0
     Copyright (c) Microsoft Corporation.  All rights reserved.
