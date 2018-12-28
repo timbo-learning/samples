@@ -3,14 +3,14 @@
 
 Under samples/core/getting-started/unit-testing-using-dotnet-test
 
-``` sh
-dotnet restore
-dotnet test
+```
+$ dotnet restore
+$ dotnet test
 ```
 
 Output of the test was:
 
-``` sh
+```
 $ dotnet test
 Build started, please wait...
 Skipping running test for project C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService\PrimeService.csproj. To run tests with dotnet test add "<IsTestProject>true<IsTestProject>" property to project file.
