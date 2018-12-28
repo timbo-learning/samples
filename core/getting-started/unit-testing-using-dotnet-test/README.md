@@ -16,7 +16,7 @@ Tried renaming .vsix to .zip, extracting and tinkering with extension.vsixmanife
 Failed on Visual Studio Professional 2017.
 Works on Visual Studio **Code**.
 
-![Coverage-Gutter](screenshots/vscode-coverage-gutters.png)
+![Coverage-Gutter](screenshots/vs-code-coverage-gutters.png)
 
 [codecover](https://marketplace.visualstudio.com/items?itemName=bradleymeck.codecover) as a second option to Coverage Gutters perhaps
 
