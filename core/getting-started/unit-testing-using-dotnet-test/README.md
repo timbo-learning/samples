@@ -1,7 +1,6 @@
-
 ## Coverlet First run
 
-```
+``` bash
 mkdir coverlet-output
 coverlet.exe PrimeService.Tests/bin/Debug/netcoreapp2.2/PrimeService.Tests.dll --target dotnet --targetargs "test PrimeService.Tests --no-build" -o coverlet-output/
 ```
@@ -43,11 +42,45 @@ Output:
 
 Output generated on coverlet-output/coverage.json
 
+To exclude xunit, include flag `--exclude "[xunit.runner.*]*"` as follows
+
+```
+coverlet.exe PrimeService.Tests/bin/Debug/netcoreapp2.2/PrimeService.Tests.dll --exclude "[xunit.runner.*]*" --target dotnet --targetargs "test PrimeService.Tests --no-build" -o coverlet-output/
+```
+
+    Test run for C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService.Tests\bin\Debug\netcoreapp2.2\PrimeService.Tests.dll(.NETCoreApp,Version=v2.2)
+    Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+    Copyright (c) Microsoft Corporation.  All rights reserved.
+
+    Starting test execution, please wait...
+
+    Total tests: 11. Passed: 11. Failed: 0. Skipped: 0.
+    Test Run Successful.
+    Test execution time: 1.2332 Seconds
+
+
+    Calculating coverage result...
+      Generating report 'coverlet-output\coverage.json'
+    +--------------+--------+--------+--------+
+    | Module       | Line   | Branch | Method |
+    +--------------+--------+--------+--------+
+    | PrimeService | 100%   | 100%   | 100%   |
+    +--------------+--------+--------+--------+
+
+    +---------+--------+--------+--------+
+    |         | Line   | Branch | Method |
+    +---------+--------+--------+--------+
+    | Total   | 100%   | 100%   | 100%   |
+    +---------+--------+--------+--------+
+    | Average | 100%   | 100%   | 100%   |
+    +---------+--------+--------+--------+
+
+
 ## dotnet test First Run
 
 Under samples/core/getting-started/unit-testing-using-dotnet-test
 
-```
+``` bash
 $ dotnet restore
 $ dotnet test
 ```
