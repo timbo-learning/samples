@@ -1,4 +1,29 @@
+# Timbó status report
+
+## Integrating with Visual Studio
+
+For graphical display, I'm looking for a integration with visual studio,
+
+Following
+https://www.hanselman.com/blog/NETCoreCodeCoverageAsAGlobalToolWithCoverlet.aspx
+
+https://dotnetthoughts.net/code-coverage-in-netcore-with-coverlet/
+also seems useful
+
+Tried installing [Coverage Gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters&WT.mc_id=-blog-scottha),
+failed. Extension did not show up on Visual Studio. .VSIX did not run.
+Looking for other options.
+
+[codecover](https://marketplace.visualstudio.com/items?itemName=bradleymeck.codecover)
+
+
+Came across this
+**suggestion: [dotCover](https://marketplace.visualstudio.com/items?itemName=JetBrains.dotCover)**
+(didnt try yet)
+
+
 ## Coverlet First run
+
 
 ``` bash
 mkdir coverlet-output
