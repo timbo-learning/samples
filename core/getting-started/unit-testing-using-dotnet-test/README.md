@@ -1,5 +1,48 @@
 
-## Testing the Project
+## Coverlet First run
+
+```
+mkdir coverlet-output
+coverlet.exe PrimeService.Tests/bin/Debug/netcoreapp2.2/PrimeService.Tests.dll --target dotnet --targetargs "test PrimeService.Tests --no-build" -o coverlet-output/
+```
+
+Output:
+    Test run for C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService.Tests\bin\Debug\netcoreapp2.2\PrimeService.Tests.dll(.NETCoreApp,Version=v2.2)
+    Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+    Copyright (c) Microsoft Corporation.  All rights reserved.
+
+    Starting test execution, please wait...
+
+    Total tests: 11. Passed: 11. Failed: 0. Skipped: 0.
+    Test Run Successful.
+    Test execution time: 1.5248 Seconds
+
+
+    Calculating coverage result...
+      Generating report 'coverlet-output\coverage.json'
+    +--------------------------------------------------+--------+--------+--------+
+    | Module                                           | Line   | Branch | Method |
+    +--------------------------------------------------+--------+--------+--------+
+    | PrimeService                                     | 100%   | 100%   | 100%   |
+    +--------------------------------------------------+--------+--------+--------+
+    | xunit.runner.reporters.netcoreapp10              | 1.1%   | 0.5%   | 5.1%   |
+    +--------------------------------------------------+--------+--------+--------+
+    | xunit.runner.utility.netcoreapp10                | 15.7%  | 9.1%   | 21%    |
+    +--------------------------------------------------+--------+--------+--------+
+    | xunit.runner.visualstudio.dotnetcore.testadapter | 45.6%  | 35.7%  | 47.8%  |
+    +--------------------------------------------------+--------+--------+--------+
+
+    +---------+--------+--------+--------+
+    |         | Line   | Branch | Method |
+    +---------+--------+--------+--------+
+    | Total   | 23.8%  | 18%    | 26.6%  |
+    +---------+--------+--------+--------+
+    | Average | 5.95%  | 4.5%   | 6.65%  |
+    +---------+--------+--------+--------+
+
+Output generated on coverlet-output/coverage.json
+
+## dotnet test First Run
 
 Under samples/core/getting-started/unit-testing-using-dotnet-test
 
@@ -10,22 +53,20 @@ $ dotnet test
 
 Output of the test was:
 
-```
-$ dotnet test
-Build started, please wait...
-Skipping running test for project C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService\PrimeService.csproj. To run tests with dotnet test add "<IsTestProject>true<IsTestProject>" property to project file.
-Build completed.
+    $ dotnet test
+    Build started, please wait...
+    Skipping running test for project C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService\PrimeService.csproj. To run tests with dotnet test add "<IsTestProject>true<IsTestProject>" property to project file.
+    Build completed.
 
-Test run for C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService.Tests\bin\Debug\netcoreapp2.2\PrimeService.Tests.dll(.NETCoreApp,Version=v2.2)
-Microsoft (R) Test Execution Command Line Tool Version 15.9.0
-Copyright (c) Microsoft Corporation.  All rights reserved.
+    Test run for C:\Users\rtimbo\source\repos\samples\core\getting-started\unit-testing-using-dotnet-test\PrimeService.Tests\bin\Debug\netcoreapp2.2\PrimeService.Tests.dll(.NETCoreApp,Version=v2.2)
+    Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+    Copyright (c) Microsoft Corporation.  All rights reserved.
 
-Starting test execution, please wait...
+    Starting test execution, please wait...
 
-Total tests: 11. Passed: 11. Failed: 0. Skipped: 0.
-Test Run Successful.
-Test execution time: 1.5296 Seconds
-```
+    Total tests: 11. Passed: 11. Failed: 0. Skipped: 0.
+    Test Run Successful.
+    Test execution time: 1.5296 Seconds
 
 # Original README.MD
 
