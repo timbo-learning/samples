@@ -1,5 +1,14 @@
 # Timbó status report
 
+## Graphic Report
+
+Following https://medium.com/agilix/collecting-test-coverage-using-coverlet-and-sonarqube-for-a-net-core-project-ef4a507d4b28
+
+Good Candidates:
+
+1. [SonarQube](https://www.sonarqube.org/) (comes in form of a Docker Image also) (can plugin from github)
+2. [ReportGenerator](https://www.nuget.org/packages/ReportGenerator/4.0.4)
+
 ## Integrating with Visual Studio
 
 For graphical display, I'm looking for a integration with visual studio,
@@ -21,7 +30,7 @@ Works on Visual Studio **Code**.
 [codecover](https://marketplace.visualstudio.com/items?itemName=bradleymeck.codecover) as a second option to Coverage Gutters perhaps
 
 
-[dotCover](https://marketplace.visualstudio.com/items?itemName=JetBrains.dotCover) shows up on VS Professional
+[dotCover](https://marketplace.visualstudio.com/items?itemName=JetBrains.dotCover) also seems to be a solution that does not use coverlet, but it is paid.
 
 
 ## Coverlet First run
