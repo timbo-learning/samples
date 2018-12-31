@@ -6,6 +6,7 @@ Following https://medium.com/agilix/collecting-test-coverage-using-coverlet-and-
 
 Good Candidates:
 
+0. [Grafana](https://grafana.com/)
 1. [SonarQube](https://www.sonarqube.org/) (comes in form of a Docker Image also) (can plugin from github)
 2. [ReportGenerator](https://www.nuget.org/packages/ReportGenerator/4.0.4)
 
@@ -137,6 +138,10 @@ Output of the test was:
     Total tests: 11. Passed: 11. Failed: 0. Skipped: 0.
     Test Run Successful.
     Test execution time: 1.5296 Seconds
+
+#### More sample code
+
+[Calculation](https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/)
 
 # Original README.MD
 
