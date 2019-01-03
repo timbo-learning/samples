@@ -3,7 +3,7 @@ import os
 #import configargparse
 import argparse
 
-def parse_arguments():
+def parse_arguments(raw_args):
     calculationXml = os.path.join('..', 'calculation.opencover.xml')
     primeXml = os.path.join('..', 'prime.opencover.xml')
     defaultCoverageFiles = calculationXml + ';' + primeXml
@@ -21,7 +21,7 @@ def parse_arguments():
             'HTML;HTMLChart;XML;PngChart;Badges'))
 
     #print(parser.format_values())
-    return parser.parse_args()
+    return parser.parse_args(raw_args)
 
 
 def reportgeneratorargs(args):
@@ -32,16 +32,19 @@ def reportgeneratorargs(args):
         + ' "-historydir:'  + args.historydir  + '"' 
         #+ ' -verbosity:Info'
 
-if __name__ == '__main__':
+def main(raw_args=None):
     reportgenerator = "reportgenerator"
     #REPORT_GENERATOR_DLL="ReportGenerator.dll"
     #REPORT_GENERATOR_PATH = os.path.join(HOME, ".nuget", "packages", "reportgenerator", "4.0.4", "tools", "netcoreapp2.0", REPORT_GENERATOR_DLL)
-    args = parse_arguments()
+    args = parse_arguments(raw_args)
     cmd = "dotnet " + reportgenerator + reportgeneratorargs(args)
     print(cmd)
     #os.path.join('..', 
     os.system(cmd)
 
+
+if __name__ == '__main__':
+    main()
 #HOME=os.path.expanduser("~")
 #REPORT_GENERATOR="reportgenerator"
 #CALCULATION_COVERAGE_FILE="calculation.opencover.xml"

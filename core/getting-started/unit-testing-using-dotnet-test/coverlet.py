@@ -1,35 +1,48 @@
 #!/usr/bin/python3
 import os
+import argparse
 
-primeFolder = "PrimeService.Tests"
-calculationFolder = "Calculation.Tests"
+def parse_arguments(raw_args):
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-tf', '--testfolder',
+        default=os.getenv('testfolder', 'Calculation.Tests')
+        )
+    parser.add_argument('-f', '--format',
+        default=os.getenv('format', 'opencover')
+        )
+    parser.add_argument('-o', '--output',
+        default=os.getenv('output', 'output.opencover.xml')
+        )
+    parser.add_argument('-t', '--target',
+        default=os.getenv('target', 'calculation')
+        )
+    parser.add_argument('--test', dest='test', action='store_true')
+    parser.add_argument('--no-test', dest='test', action='store_false')
+    parser.set_defaults(test='True')
+    return parser.parse_args(raw_args)
 
-primeBin = os.path.join(primeFolder   , 'bin', 'Debug', 'netcoreapp2.2', 'PrimeService.Tests.dll')
-calculationBin  = os.path.join(calculationFolder , 'bin', 'Debug', 'netcoreapp2.2', 'Calculation.Tests.dll')
+def coverlet(args):
+    print(args)
+    cmd = "coverlet %(target)s" \
+            + ' --exclude "[xunit.runner.*]*" ' \
+            + ' --target dotnet --targetargs "test %(testfolder)s --no-build" ' \
+            + ' -o %(output)s' \
+            + ' --format %(format)s' \
+            # lcov to show lines on Visual Studio Code
+    cmd = cmd % {
+        'target': args.target,
+        'testfolder': args.testfolder,
+        'output': 'prime.opencover.xml',
+        'format': 'opencover'
+        } 
+    print(">>>>" + cmd)
+    return cmd
 
-cmd = "coverlet %(bin)s" \
-        + ' --exclude "[xunit.runner.*]*" ' \
-        + ' --target dotnet --targetargs "test %(folder)s --no-build" ' \
-        + ' -o %(output)s' \
-        + ' --format %(format)s' \
-        # lcov to show lines on Visual Studio Code
+def main(raw_args=None):
+    args = parse_arguments(raw_args)
+    cmd = coverlet(args)
+    args.test and os.system("dotnet test")
+    os.system(cmd)
 
-os.system("dotnet test")
-
-PrimeCmd = cmd % {
-    'bin': primeBin,
-    'folder': primeFolder,
-    'output': 'prime.opencover.xml',
-    'format': 'opencover'
-    } 
-print(">>>>" + PrimeCmd)
-os.system(PrimeCmd)
-
-CalculationCmd = cmd % {
-    'bin': calculationBin,
-    'folder': calculationFolder,
-    'output': 'calculation.opencover.xml',
-    'format': 'opencover'
-    }
-print(">>>>" + CalculationCmd)
-os.system(CalculationCmd)
+if __name__ == '__main__':
+    main()
