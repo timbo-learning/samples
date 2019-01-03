@@ -1,6 +1,5 @@
+#!/usr/bin/python3
 import os
-
-os.system("dotnet test")
 
 primeFolder = "PrimeService.Tests"
 calculationFolder = "Calculation.Tests"
@@ -10,18 +9,27 @@ calculationBin  = os.path.join(calculationFolder , 'bin', 'Debug', 'netcoreapp2.
 
 cmd = "coverlet %(bin)s" \
         + ' --exclude "[xunit.runner.*]*" ' \
-        + '--target dotnet --targetargs "test %(folder)s --no-build" ' \
-        + '--format lcov -o %(output)s'
+        + ' --target dotnet --targetargs "test %(folder)s --no-build" ' \
+        + ' -o %(output)s' \
+        + ' --format %(format)s' \
+        # lcov to show lines on Visual Studio Code
 
-print(cmd)
-os.system(cmd % {
+os.system("dotnet test")
+
+PrimeCmd = cmd % {
     'bin': primeBin,
     'folder': primeFolder,
-    'output': 'prime.info'
-    } )
+    'output': 'prime.opencover.xml',
+    'format': 'opencover'
+    } 
+print(">>>>" + PrimeCmd)
+os.system(PrimeCmd)
 
-os.system(cmd % {
+CalculationCmd = cmd % {
     'bin': calculationBin,
     'folder': calculationFolder,
-    'output': 'calculation.info'
-    } )
+    'output': 'calculation.opencover.xml',
+    'format': 'opencover'
+    }
+print(">>>>" + CalculationCmd)
+os.system(CalculationCmd)

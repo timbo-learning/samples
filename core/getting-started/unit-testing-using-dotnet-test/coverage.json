@@ -67,6 +67,16 @@
               "Hits": 4
             }
           ]
+        },
+        "System.Void Prime.Services.PrimeService::DoNotCoverMe()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
         }
       }
     }

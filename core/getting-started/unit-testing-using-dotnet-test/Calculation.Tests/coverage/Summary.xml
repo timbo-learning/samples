@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>1/2/2019 - 2:32:56 PM</Generatedon>
+    <Parser>OpenCoverParser</Parser>
+    <Assemblies>1</Assemblies>
+    <Classes>4</Classes>
+    <Files>4</Files>
+    <Coveredlines>32</Coveredlines>
+    <Uncoveredlines>0</Uncoveredlines>
+    <Coverablelines>32</Coverablelines>
+    <Totallines>85</Totallines>
+    <Linecoverage>100%</Linecoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="Calculation" classes="4" coverage="100" coveredlines="32" coverablelines="32" totallines="85" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="Calculation.Basic.Addition" coverage="100" coveredlines="8" coverablelines="8" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Calculation.Basic.Division" coverage="100" coveredlines="8" coverablelines="8" totallines="21" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Calculation.Basic.Multiplication" coverage="100" coveredlines="8" coverablelines="8" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Calculation.Basic.Subtraction" coverage="100" coveredlines="8" coverablelines="8" totallines="22" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

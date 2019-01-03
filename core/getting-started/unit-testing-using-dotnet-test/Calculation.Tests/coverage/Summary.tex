@@ -1,0 +1,265 @@
+\documentclass[a4paper,landscape,10pt]{article}
+\usepackage[paper=a4paper,landscape,left=20mm,right=20mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{color}
+\usepackage{colortbl}
+\definecolor{green}{rgb}{0.04,0.68,0.04}
+\definecolor{orange}{rgb}{0.97,0.65,0.12}
+\definecolor{red}{rgb}{0.75,0.04,0.04}
+\definecolor{gray}{rgb}{0.86,0.86,0.86}
+
+\usepackage[pdftex,
+            colorlinks=true, linkcolor=red, urlcolor=green, citecolor=red,%
+            raiselinks=true,%
+            bookmarks=true,%
+            bookmarksopenlevel=1,%
+            bookmarksopen=true,%
+            bookmarksnumbered=true,%
+            hyperindex=true,% 
+            plainpages=false,% correct hyperlinks
+            pdfpagelabels=true%,% view TeX pagenumber in PDF reader
+            %pdfborder={0 0 0.5}
+            ]{hyperref}
+
+\hypersetup{pdftitle={Coverage Report},
+            pdfauthor={ReportGenerator - 4.0.4.0}
+           }
+
+\pagestyle{fancy}
+\fancyhead[LE,LO]{\leftmark}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{ReportGenerator - 4.0.4.0}
+
+\begin{document}
+
+\setcounter{secnumdepth}{-1}
+\section{Summary}
+\begin{longtable}[l]{ll}
+\textbf{Generated on:} & 1/2/2019 - 2:32:56 PM\\
+\textbf{Parser:} & OpenCoverParser\\
+\textbf{Assemblies:} & 1\\
+\textbf{Classes:} & 4\\
+\textbf{Files:} & 4\\
+\textbf{Covered lines:} & 32\\
+\textbf{Uncovered lines:} & 0\\
+\textbf{Coverable lines:} & 32\\
+\textbf{Total lines:} & 85\\
+\textbf{Line coverage:} & 100\%\\
+\end{longtable}
+\section{Risk Hotspots}
+No risk hotspots found.
+\section{Coverage}
+\begin{longtable}[l]{|l|r|r|r|r|r|r|}
+\hline
+\textbf{Name} & \textbf{Covered} & \textbf{Uncovered} & \textbf{Coverable} & \textbf{Total} & \textbf{Line coverage} & \textbf{Branch coverage}\\
+\hline
+\textbf{Calculation} & \textbf{32} & \textbf{0} & \textbf{32} & \textbf{85} & \textbf{100\%} & \textbf{}\\
+\hline
+Calculation.Basic.Addition & 8 & 0 & 8 & 23 & 100\% & \\
+\hline
+Calculation.Basic.Division & 8 & 0 & 8 & 21 & 100\% & \\
+\hline
+Calculation.Basic.Multiplication & 8 & 0 & 8 & 19 & 100\% & \\
+\hline
+Calculation.Basic.Subtraction & 8 & 0 & 8 & 22 & 100\% & \\
+\hline
+\end{longtable}
+\newpage
+\section{Calculation.Basic.Addition}
+\subsection{Summary}
+\begin{longtable}[l]{ll}
+\textbf{Class:} & Calculation.Basic.Addition\\
+\textbf{Assembly:} & Calculation\\
+\textbf{File(s):} & \begin{minipage}[t]{12cm}{e\textbackslash getting-started\textbackslash unit-testing-using-dotnet-test\textbackslash Calculation\textbackslash Basic\textbackslash Addition.cs}\end{minipage} \\
+\textbf{Covered lines:} & 8\\
+\textbf{Uncovered lines:} & 0\\
+\textbf{Coverable lines:} & 8\\
+\textbf{Total lines:} & 23\\
+\textbf{Line coverage:} & 100\%\\
+\end{longtable}
+\subsection{Metrics}
+\begin{longtable}[l]{|l|r|r|r|r|}
+\hline
+\textbf{Method} & \textbf{Cyclomatic complexity} & \textbf{NPath complexity} & \textbf{Sequence coverage} & \textbf{Branch coverage}\\
+\hline
+\textbf{.ctor(...)} & 1 & 0 & 1\% & 1\%\\
+\hline
+\textbf{Calculate()} & 1 & 0 & 1\% & 1\%\\
+\hline
+\end{longtable}
+\subsection{File(s)}
+\subsubsection{e\textbackslash getting-started\textbackslash unit-testing-using-dotnet-test\textbackslash Calculation\textbackslash Basic\textbackslash Addition.cs}
+\begin{longtable}[l]{lrrll}
+\textbf{} & \textbf{\#} & \textbf{Line} & \textbf{} & \textbf{Line coverage}\\
+\cellcolor{gray} &  & \verb~1~ & & \verb~using System;~\\
+\cellcolor{gray} &  & \verb~2~ & & \verb~using System.Collections.Generic;~\\
+\cellcolor{gray} &  & \verb~3~ & & \verb~using System.Text;~\\
+\cellcolor{gray} &  & \verb~4~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~5~ & & \verb~namespace Calculation.Basic~\\
+\cellcolor{gray} &  & \verb~6~ & & \verb~{~\\
+\cellcolor{gray} &  & \verb~7~ & & \verb~    public class Addition : ICalculation~\\
+\cellcolor{gray} &  & \verb~8~ & & \verb~    {~\\
+\cellcolor{gray} &  & \verb~9~ & & \verb~        private readonly decimal x;~\\
+\cellcolor{gray} &  & \verb~10~ & & \verb~        private readonly decimal y;~\\
+\cellcolor{gray} &  & \verb~11~ & & \verb~~\\
+\cellcolor{green} & 4 & \verb~12~ & & \verb~        public Addition(decimal x, decimal y)~\\
+\cellcolor{green} & 4 & \verb~13~ & & \verb~        {~\\
+\cellcolor{green} & 4 & \verb~14~ & & \verb~            this.x = x;~\\
+\cellcolor{green} & 4 & \verb~15~ & & \verb~            this.y = y;~\\
+\cellcolor{green} & 4 & \verb~16~ & & \verb~        }~\\
+\cellcolor{gray} &  & \verb~17~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~18~ & & \verb~        public decimal Calculate()~\\
+\cellcolor{green} & 3 & \verb~19~ & & \verb~        {~\\
+\cellcolor{green} & 3 & \verb~20~ & & \verb~            return x + y;~\\
+\cellcolor{green} & 3 & \verb~21~ & & \verb~        }~\\
+\cellcolor{gray} &  & \verb~22~ & & \verb~    }~\\
+\cellcolor{gray} &  & \verb~23~ & & \verb~}~\\
+\end{longtable}
+\newpage
+\section{Calculation.Basic.Division}
+\subsection{Summary}
+\begin{longtable}[l]{ll}
+\textbf{Class:} & Calculation.Basic.Division\\
+\textbf{Assembly:} & Calculation\\
+\textbf{File(s):} & \begin{minipage}[t]{12cm}{e\textbackslash getting-started\textbackslash unit-testing-using-dotnet-test\textbackslash Calculation\textbackslash Basic\textbackslash Division.cs}\end{minipage} \\
+\textbf{Covered lines:} & 8\\
+\textbf{Uncovered lines:} & 0\\
+\textbf{Coverable lines:} & 8\\
+\textbf{Total lines:} & 21\\
+\textbf{Line coverage:} & 100\%\\
+\end{longtable}
+\subsection{Metrics}
+\begin{longtable}[l]{|l|r|r|r|r|}
+\hline
+\textbf{Method} & \textbf{Cyclomatic complexity} & \textbf{NPath complexity} & \textbf{Sequence coverage} & \textbf{Branch coverage}\\
+\hline
+\textbf{.ctor(...)} & 1 & 0 & 1\% & 1\%\\
+\hline
+\textbf{Calculate()} & 1 & 0 & 1\% & 1\%\\
+\hline
+\end{longtable}
+\subsection{File(s)}
+\subsubsection{e\textbackslash getting-started\textbackslash unit-testing-using-dotnet-test\textbackslash Calculation\textbackslash Basic\textbackslash Division.cs}
+\begin{longtable}[l]{lrrll}
+\textbf{} & \textbf{\#} & \textbf{Line} & \textbf{} & \textbf{Line coverage}\\
+\cellcolor{gray} &  & \verb~1~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~2~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~3~ & & \verb~namespace Calculation.Basic~\\
+\cellcolor{gray} &  & \verb~4~ & & \verb~{~\\
+\cellcolor{gray} &  & \verb~5~ & & \verb~    public class Division : ICalculation~\\
+\cellcolor{gray} &  & \verb~6~ & & \verb~    {~\\
+\cellcolor{gray} &  & \verb~7~ & & \verb~        private readonly decimal x;~\\
+\cellcolor{gray} &  & \verb~8~ & & \verb~        private readonly decimal y;~\\
+\cellcolor{gray} &  & \verb~9~ & & \verb~~\\
+\cellcolor{green} & 5 & \verb~10~ & & \verb~        public Division(decimal x, decimal y)~\\
+\cellcolor{green} & 5 & \verb~11~ & & \verb~        {~\\
+\cellcolor{green} & 5 & \verb~12~ & & \verb~            this.x = x;~\\
+\cellcolor{green} & 5 & \verb~13~ & & \verb~            this.y = y;~\\
+\cellcolor{green} & 5 & \verb~14~ & & \verb~        }~\\
+\cellcolor{gray} &  & \verb~15~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~16~ & & \verb~        public decimal Calculate()~\\
+\cellcolor{green} & 5 & \verb~17~ & & \verb~        {~\\
+\cellcolor{green} & 5 & \verb~18~ & & \verb~            return x / y;~\\
+\cellcolor{green} & 5 & \verb~19~ & & \verb~        }~\\
+\cellcolor{gray} &  & \verb~20~ & & \verb~    }~\\
+\cellcolor{gray} &  & \verb~21~ & & \verb~}~\\
+\end{longtable}
+\newpage
+\section{Calculation.Basic.Multiplication}
+\subsection{Summary}
+\begin{longtable}[l]{ll}
+\textbf{Class:} & Calculation.Basic.Multiplication\\
+\textbf{Assembly:} & Calculation\\
+\textbf{File(s):} & \begin{minipage}[t]{12cm}{ing-started\textbackslash unit-testing-using-dotnet-test\textbackslash Calculation\textbackslash Basic\textbackslash Multiplication.cs}\end{minipage} \\
+\textbf{Covered lines:} & 8\\
+\textbf{Uncovered lines:} & 0\\
+\textbf{Coverable lines:} & 8\\
+\textbf{Total lines:} & 19\\
+\textbf{Line coverage:} & 100\%\\
+\end{longtable}
+\subsection{Metrics}
+\begin{longtable}[l]{|l|r|r|r|r|}
+\hline
+\textbf{Method} & \textbf{Cyclomatic complexity} & \textbf{NPath complexity} & \textbf{Sequence coverage} & \textbf{Branch coverage}\\
+\hline
+\textbf{.ctor(...)} & 1 & 0 & 1\% & 1\%\\
+\hline
+\textbf{Calculate()} & 1 & 0 & 1\% & 1\%\\
+\hline
+\end{longtable}
+\subsection{File(s)}
+\subsubsection{ing-started\textbackslash unit-testing-using-dotnet-test\textbackslash Calculation\textbackslash Basic\textbackslash Multiplication.cs}
+\begin{longtable}[l]{lrrll}
+\textbf{} & \textbf{\#} & \textbf{Line} & \textbf{} & \textbf{Line coverage}\\
+\cellcolor{gray} &  & \verb~1~ & & \verb~namespace Calculation.Basic~\\
+\cellcolor{gray} &  & \verb~2~ & & \verb~{~\\
+\cellcolor{gray} &  & \verb~3~ & & \verb~    public class Multiplication : ICalculation~\\
+\cellcolor{gray} &  & \verb~4~ & & \verb~    {~\\
+\cellcolor{gray} &  & \verb~5~ & & \verb~        private readonly decimal x;~\\
+\cellcolor{gray} &  & \verb~6~ & & \verb~        private readonly decimal y;~\\
+\cellcolor{gray} &  & \verb~7~ & & \verb~~\\
+\cellcolor{green} & 5 & \verb~8~ & & \verb~        public Multiplication(decimal x, decimal y)~\\
+\cellcolor{green} & 5 & \verb~9~ & & \verb~        {~\\
+\cellcolor{green} & 5 & \verb~10~ & & \verb~            this.x = x;~\\
+\cellcolor{green} & 5 & \verb~11~ & & \verb~            this.y = y;~\\
+\cellcolor{green} & 5 & \verb~12~ & & \verb~        }~\\
+\cellcolor{gray} &  & \verb~13~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~14~ & & \verb~        public decimal Calculate()~\\
+\cellcolor{green} & 5 & \verb~15~ & & \verb~        {~\\
+\cellcolor{green} & 5 & \verb~16~ & & \verb~            return x * y;~\\
+\cellcolor{green} & 5 & \verb~17~ & & \verb~        }~\\
+\cellcolor{gray} &  & \verb~18~ & & \verb~    }~\\
+\cellcolor{gray} &  & \verb~19~ & & \verb~}~\\
+\end{longtable}
+\newpage
+\section{Calculation.Basic.Subtraction}
+\subsection{Summary}
+\begin{longtable}[l]{ll}
+\textbf{Class:} & Calculation.Basic.Subtraction\\
+\textbf{Assembly:} & Calculation\\
+\textbf{File(s):} & \begin{minipage}[t]{12cm}{etting-started\textbackslash unit-testing-using-dotnet-test\textbackslash Calculation\textbackslash Basic\textbackslash Subtraction.cs}\end{minipage} \\
+\textbf{Covered lines:} & 8\\
+\textbf{Uncovered lines:} & 0\\
+\textbf{Coverable lines:} & 8\\
+\textbf{Total lines:} & 22\\
+\textbf{Line coverage:} & 100\%\\
+\end{longtable}
+\subsection{Metrics}
+\begin{longtable}[l]{|l|r|r|r|r|}
+\hline
+\textbf{Method} & \textbf{Cyclomatic complexity} & \textbf{NPath complexity} & \textbf{Sequence coverage} & \textbf{Branch coverage}\\
+\hline
+\textbf{.ctor(...)} & 1 & 0 & 1\% & 1\%\\
+\hline
+\textbf{Calculate()} & 1 & 0 & 1\% & 1\%\\
+\hline
+\end{longtable}
+\subsection{File(s)}
+\subsubsection{etting-started\textbackslash unit-testing-using-dotnet-test\textbackslash Calculation\textbackslash Basic\textbackslash Subtraction.cs}
+\begin{longtable}[l]{lrrll}
+\textbf{} & \textbf{\#} & \textbf{Line} & \textbf{} & \textbf{Line coverage}\\
+\cellcolor{gray} &  & \verb~1~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~2~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~3~ & & \verb~namespace Calculation.Basic~\\
+\cellcolor{gray} &  & \verb~4~ & & \verb~{~\\
+\cellcolor{gray} &  & \verb~5~ & & \verb~    public class Subtraction : ICalculation~\\
+\cellcolor{gray} &  & \verb~6~ & & \verb~    {~\\
+\cellcolor{gray} &  & \verb~7~ & & \verb~        private readonly decimal x;~\\
+\cellcolor{gray} &  & \verb~8~ & & \verb~        private readonly decimal y;~\\
+\cellcolor{gray} &  & \verb~9~ & & \verb~~\\
+\cellcolor{green} & 3 & \verb~10~ & & \verb~        public Subtraction(decimal x, decimal y)~\\
+\cellcolor{green} & 3 & \verb~11~ & & \verb~        {~\\
+\cellcolor{green} & 3 & \verb~12~ & & \verb~            this.x = x;~\\
+\cellcolor{green} & 3 & \verb~13~ & & \verb~            this.y = y;~\\
+\cellcolor{green} & 3 & \verb~14~ & & \verb~        }~\\
+\cellcolor{gray} &  & \verb~15~ & & \verb~~\\
+\cellcolor{gray} &  & \verb~16~ & & \verb~        public decimal Calculate()~\\
+\cellcolor{green} & 3 & \verb~17~ & & \verb~        {~\\
+\cellcolor{green} & 3 & \verb~18~ & & \verb~            return x - y;~\\
+\cellcolor{green} & 3 & \verb~19~ & & \verb~        }~\\
+\cellcolor{gray} &  & \verb~20~ & & \verb~    }~\\
+\cellcolor{gray} &  & \verb~21~ & & \verb~}~\\
+\cellcolor{gray} &  & \verb~22~ & & \verb~~\\
+\end{longtable}
+\end{document}

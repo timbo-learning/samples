@@ -17,5 +17,12 @@ namespace Calculation.Basic.Tests
         {
             calculation.Calculate().Should().Be(result);
         }
+
+        [Fact]
+        public void CoveredOnSecondBuild()
+        {
+            Addition calculation = new Addition(1, 1);
+            calculation.CoveredOnNextBuild();
+        }
     }
 }
