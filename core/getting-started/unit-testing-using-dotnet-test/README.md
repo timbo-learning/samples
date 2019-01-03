@@ -2,8 +2,26 @@
 
 ## Graphic Report
 
-#### Report Generator
+#### Report Generator 
 
+Generates a very descriptive `index.htm` under `Calculation.Tests/report-generator-coverage`,
+showing line coverage, branch coverage, covered lines, build history.
+
+on this project under `core/getting-started/unit-testing-using-dotnet-test`, run:
+
+```
+python3 coverlet.py
+cd Calculation.Tests
+python3 report-generator.py
+```
+
+###### Report Generator Outputs
+
+Branch Coverage ![Branch Coverage Badge](Calculation.Tests/report-generator-coverage/badge_branchcoverage.png)
+
+Line Coverage ![Line Coverage Badge](Calculation.Tests/report-generator-coverage/badge_linecoverage.png)
+
+Combined Coverage![Coverage Badge](Calculation.Tests/report-generator-coverage/badge_combined.svg)
 
     Generated on:	1/3/2019 - 12:29:02 PM
     Parser:	MultiReportParser (2x OpenCoverParser)
@@ -17,6 +35,17 @@
     Line coverage:	85.4%
     Branch coverage:	100%
 
+Includes *build history*:
+
+![Report Generator Coverage](screenshots/report-generator-coverage.PNG)
+
+You can click on a class to see its details:
+![Report Generator Addition Class](screenshots/report-generator-addition.PNG)
+
+And it shows line coverage (as shown before on Visual Studio Code).
+![Report Generator Addition Line Coverage](screenshots/report-generator-addition-line-coverage.PNG)
+
+Next steps are trying Grafana or SonarQube.
 #### Report Generator, getting it to work
 
 [Usage instructions](https://danielpalme.github.io/ReportGenerator/usage.html) (generates the cli command)
@@ -41,7 +70,9 @@ Following https://medium.com/agilix/collecting-test-coverage-using-coverlet-and-
 Good Candidates:
 
 0. [Grafana](https://grafana.com/)
-1. [SonarQube](https://www.sonarqube.org/) (comes in form of a Docker Image also) (can plugin from github)
+1. [SonarQube](https://www.sonarqube.org/) (comes in form of a Docker Image also) (can plugin from github).
+    SonarQube seems to be microservices centered because
+    it launches a web server and sits behind a HTTP API.
 2. [ReportGenerator](https://www.nuget.org/packages/ReportGenerator/4.0.4)
 
 ## Integrating with Visual Studio
