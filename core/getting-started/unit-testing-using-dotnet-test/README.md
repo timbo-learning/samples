@@ -2,6 +2,11 @@
 
 ## Graphic Report
 
+#### SonarQube
+
+https://www.sonarqube.org/
+
+
 #### Report Generator 
 
 Generates a very descriptive `index.htm` under `Calculation.Tests/report-generator-coverage`,
@@ -17,9 +22,9 @@ python3 report-generator.py
 
 ###### Report Generator Outputs
 
-Branch Coverage ![Branch Coverage Badge](Calculation.Tests/report-generator-coverage/badge_branchcoverage.png)
+Branch Coverage ![Branch Coverage Badge](Calculation.Tests/report-generator-coverage/badge_branchcoverage.svg)
 
-Line Coverage ![Line Coverage Badge](Calculation.Tests/report-generator-coverage/badge_linecoverage.png)
+Line Coverage ![Line Coverage Badge](Calculation.Tests/report-generator-coverage/badge_linecoverage.svg)
 
 Combined Coverage![Coverage Badge](Calculation.Tests/report-generator-coverage/badge_combined.svg)
 
